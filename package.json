@@ -1,0 +1,9 @@
+{
+  "name": "llm-code-evaluation-lab",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test javascript_react_tasks/use_effect_fetch/tests/*.test.js"
+  }
+}
