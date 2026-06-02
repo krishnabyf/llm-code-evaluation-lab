@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export PYTHONPATH="${PYTHONPATH:-}:$(pwd)"
+
 python3 -m pytest python_tasks/rate_limiter/tests
 python3 -m ruff check python_tasks
 

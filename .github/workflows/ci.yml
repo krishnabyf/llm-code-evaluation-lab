@@ -26,9 +26,11 @@ jobs:
       - name: Install Python tools
         run: pip install -r requirements-dev.txt
       - name: Python checks
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
-          pytest python_tasks/rate_limiter/tests
-          ruff check python_tasks
+          python -m pytest python_tasks/rate_limiter/tests
+          python -m ruff check python_tasks
       - name: JavaScript checks
         run: node --test javascript_react_tasks/use_effect_fetch/tests/*.test.js
       - name: C++ checks
